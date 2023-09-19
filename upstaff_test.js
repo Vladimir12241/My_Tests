@@ -7,7 +7,7 @@ const addSpecialDiv = () => {
         const myDiv = divCreator();
 
         allProducts.insertBefore(myDiv, productsList[4]);
-    }
+    };
 
     const divCreator = () => {
         const windowWidth = window.innerWidth;
@@ -40,6 +40,7 @@ const addSpecialDiv = () => {
             justify-content: center;
             align-items: center;
             text-align: center;
+            background: #fff;
             box-shadow: 1px 1px 5px 5px #f1f1f1;
             `;
 
@@ -55,9 +56,8 @@ const addSpecialDiv = () => {
         }
     })
 
+    insernNewDiv();
+};
 
-    insernNewDiv()
-}
-
-addSpecialDiv()
+addSpecialDiv();
 
