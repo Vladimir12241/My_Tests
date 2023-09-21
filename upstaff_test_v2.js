@@ -315,7 +315,7 @@ const addSpecialDiv = () => {
 	const windSize = () => {
 		const newWidth = window.innerWidth;
 		const mySpetialDiv = document.querySelector('#mySpecialDiv');
-		const myContent = document.querySelector('#carouselContent');
+		const myContent = document.querySelectorAll('#carouselContent');
 		const myCarousel = document.querySelector('#carouselButtonns');
 
 		if (mySpetialDiv) {
