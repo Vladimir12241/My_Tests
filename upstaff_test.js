@@ -17,7 +17,7 @@ const addSpecialDiv = () => {
         const randomTxt = document.createElement('span');
         randomTxt.textContent = 'Dolor laborum qui mollit ad magna tempor culpa qui excepteur';
         
-        mainBox.id = 'my_special_div';
+        mainBox.id = 'mySpecialDiv';
         mainBox.appendChild(contentBox);
         contentBox.appendChild(randomTxt);
         
@@ -48,7 +48,7 @@ const addSpecialDiv = () => {
     }
 
     window.addEventListener('resize', () => {
-        const mySpetialDiv = document.querySelector('#my_special_div');
+        const mySpetialDiv = document.querySelector('#mySpecialDiv');
         
         if (mySpetialDiv) {
             mySpetialDiv.style.width = window.innerWidth > 1199 ? '50%' : window.innerWidth > 767 ? '63%' : '100%';
