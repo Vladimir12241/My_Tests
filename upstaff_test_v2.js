@@ -207,7 +207,9 @@ const addSpecialDiv = () => {
 			align-items: center;
 			width: fit-content;
 			width: calc(50% - 1rem);
-			margin: 0.5rem 2rem 2rem 1rem`;
+			margin: 0.5rem 2rem 2rem 1rem;
+   			padding: 0 1rem;
+      			`;
 
 			text.textContent = `Slide ${
 				i + 1
@@ -328,6 +330,7 @@ const addSpecialDiv = () => {
 				myCarousel.style.transform = 'translate(-50%, 0%)';
 				myContent.forEach((content) => {
 					content.style.flexDirection = 'column-reverse';
+					content.children[0].style.width = 'auto';
 					content.children[1].style.width = '100%';
 				});
 			} else {
@@ -336,6 +339,7 @@ const addSpecialDiv = () => {
 				myCarousel.style.transform = 'translate(-50%, 0%)';
 				myContent.forEach((content) => {
 					content.style.flexDirection = 'row';
+					content.children[0].style.width = 'calc(50% - 1rem)';
 					content.children[1].style.width = 'calc(100% - 1rem)';
 				});
 			}
