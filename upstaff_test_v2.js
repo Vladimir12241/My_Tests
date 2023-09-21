@@ -191,15 +191,15 @@ const addSpecialDiv = () => {
 			text.classList.add('carousel-text');
 
 			boxContent.style.cssText = `
-            display: flex;
+            		display: flex;
 			position: absolute;
 			border-radius: 10px;
-            width: 100%;
+            		width: 100%;
 			height: 100%;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            `;
+           		justify-content: center;
+           		align-items: center;
+            		text-align: center;
+            		`;
 
 			textContent.style.cssText = `
 			display: flex;
@@ -323,17 +323,21 @@ const addSpecialDiv = () => {
 				newWidth > 1199 ? '50%' : newWidth > 767 ? '63%' : '100%';
 			mySpetialDiv.style.height = newWidth < 768 ? '554px' : 'auto';
 			if (newWidth < 581) {
-				myContent.style.flexDirection = 'column-reverse';
-				myContent.children[1].style.width = '100%';
 				myCarousel.style.top = '90%';
 				myCarousel.style.left = '50%';
 				myCarousel.style.transform = 'translate(-50%, 0%)';
+				myContent.forEach((content) => {
+					content.style.flexDirection = 'column-reverse';
+					content.children[1].style.width = '100%';
+				});
 			} else {
-				myContent.style.flexDirection = 'row';
-				myContent.children[1].style.width = 'calc(100% - 1rem)';
 				myCarousel.style.top = '85%';
 				myCarousel.style.left = 'calc(63% + (100% - 70%)/2)';
 				myCarousel.style.transform = 'translate(-50%, 0%)';
+				myContent.forEach((content) => {
+					content.style.flexDirection = 'row';
+					content.children[1].style.width = 'calc(100% - 1rem)';
+				});
 			}
 		}
 	};
