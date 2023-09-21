@@ -6,7 +6,7 @@ const addSpecialDiv = () => {
         const productsList = allProducts.querySelectorAll('.product-item');
         const myDiv = divCreator();
 
-        allProducts.insertBefore(myDiv, productsList[4]);
+        allProducts.insertBefore(myDiv, productsList[5]);
     };
 
     const divCreator = () => {
